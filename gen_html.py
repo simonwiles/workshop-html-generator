@@ -34,8 +34,10 @@ def get_git_revision(working_dir):
 
 def render_html(template_fn, template_vars):
 
+    template_path = Path(template_fn).resolve()
     mytemplate = Template(
-        filename=template_fn, lookup=TemplateLookup(directories=["./"])
+        filename=str(template_path),
+        lookup=TemplateLookup(directories=[str(template_path.parent)]),
     )
     document, errors = tidy_document(
         mytemplate.render(**template_vars),
