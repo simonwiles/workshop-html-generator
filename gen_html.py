@@ -17,14 +17,14 @@ from markdown.extensions.toc import TocExtension
 from tidylib import tidy_document
 
 
-def get_git_revision(working_dir):
-    """ Return the git commit hash of the current revision, or False
+def get_git_revision_for_file(file_path: Path):
+    """ Return the git commit hash of the last commit to touch file_path, or False
         if the file is not under a git repo. """
 
     try:
         return subprocess.check_output(
-            "git describe --always".split(),
-            cwd=working_dir,
+            "git log -n 1 --pretty=format:%h --".split() + [file_path.name],
+            cwd=str(file_path.parent),
             universal_newlines=True,
             stderr=subprocess.DEVNULL,
         ).strip()
@@ -85,7 +85,7 @@ def main():
         "content": content,
         "toc": md.toc,
         "modified": datetime.now().date().isoformat(),
-        "revision": get_git_revision(markdown_path.parent),
+        "revision": get_git_revision_for_file(markdown_path),
     }
 
     render_html(args.template, template_vars)
