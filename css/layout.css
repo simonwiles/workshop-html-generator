@@ -1,0 +1,75 @@
+
+/* specific styles and over-rides */
+
+body {
+  background-color: var(--background-color);
+  color: var(--process-black);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main,
+header > div,
+.wrapped {
+  margin: 0 auto;
+  max-width: 90vw;
+  padding: 10px 0;
+  width: 640px;
+}
+
+header > div {
+  align-items: flex-end;
+  display: flex;
+  height: 100px;
+  margin: 0 auto;
+  max-width: 90vw;
+  padding: 10px 0;
+  width: 640px;
+}
+
+header span {
+  font-size: 2em;
+  margin: 0 10px;
+}
+
+header {
+  background-color: var(--cardinal);
+  color: white;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+}
+
+footer {
+  background-color: var(--cardinal);
+  color: var(--text-on-cardinal);
+}
+
+.instruction {
+  background-color: var(--sandstone-semi-opaque);
+  padding: .5em 1em;
+  border-radius: .5em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  border: 1px solid var(--sandstone);
+}
+
+.toclink {
+  color: inherit;
+}
+
+.headerlink {
+  margin-left: 4px;
+  visibility: hidden;
+}
+
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink,
+h4:hover .headerlink,
+h5:hover .headerlink,
+h6:hover .headerlink {
+  visibility: visible;
+}
+
+aside {
+  display: none;
+}

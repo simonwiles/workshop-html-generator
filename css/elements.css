@@ -1,0 +1,64 @@
+
+:root {
+  --background-color: #f6f6f6;
+  --pale-yellow: rgba(255, 255, 0, .3);
+
+  /* From the Stanford Color Palette */
+  --cardinal: #8c1515;
+  --process-black: #2e2d29;
+  --text-on-cardinal: #e3dfd5;
+  --sandstone: #d2c295;
+  --sandstone-semi-opaque: rgba(210,194,149,.5);
+  --chocolate: #2F2424;
+  --light-sage: #c7d1c5;
+  --lagunita: #007c92;
+}
+
+::selection,
+a::selection {
+  background: var(--pale-yellow);
+}
+
+a,
+a::selection {
+  color: var(--lagunita);
+  color: var(--cardinal);
+  text-decoration: none;
+}
+
+p {
+  margin: 1em 0;
+}
+
+code {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: white;
+  border-radius: 3px;
+  font-family: 'Source Sans Mono', monospace;
+  font-size: .9em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  line-height: 1em;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: .9em; }
+
+article > ul > * + * { margin-top: .8em; }

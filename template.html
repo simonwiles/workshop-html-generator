@@ -1,24 +1,49 @@
 <!DOCTYPE HTML>
 <html>
- <head prefix="dcterms: http://purl.org/dc/terms/#">
+  <head prefix="dcterms: http://purl.org/dc/terms/#">
 
-  <meta charset="utf-8"/>
-  <title>${title} :: CIDR Workshops</title>
+    <meta charset="utf-8"/>
+    <title>${title} :: CIDR Workshops</title>
 
-  % if revision:
-  	<meta name="version" content="${revision}">
-  % endif
+    % if revision:
+      <meta name="version" content="${revision}">
+    % endif
 
-  <meta name="dcterms.modified" content="${modified}">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style><%include file="/markdown.css" /></style>
+    <meta name="dcterms.modified" content="${modified}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
- </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro" rel="stylesheet">
+    <style>
+      <%include file="/css/css-reset.css" />
+      <%include file="/css/elements.css" />
+      <%include file="/css/layout.css" />
+    </style>
+
+  </head>
 
   <body>
-  	<main>${content}</main>
-	<aside>${toc}</aside>
-	<footer>This workshop is part of the CIDR Workshop Series.  See upcoming workshops at https://cidr.stanford.edu/workshops/</footer>
+    <header>
+      <div>
+        <a href="https://cidr.stanford.edu"
+           target="_blank"
+           title="Center for Interdisciplinary Digital Research @ Stanford University Libraries">
+          <img
+            src="data:image/png;base64,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"
+            alt="Center for Interdisciplinary Digital Research @ Stanford University Libraries">
+        </a>
+      <span>Workshop Series</span>
+    </div>
+  </header>
+
+    <main><article>${content}</article></main>
+    <aside>${toc}</aside>
+    <footer>
+      <p class="wrapped">
+        This workshop is part of the CIDR Workshop Series.<br>
+        See upcoming workshops at https://cidr.stanford.edu/workshops/
+      </p>
+    </footer>
   </body>
 
 </html>
