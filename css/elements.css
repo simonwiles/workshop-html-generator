@@ -5,6 +5,7 @@
 
   /* From the Stanford Color Palette */
   --cardinal: #8c1515;
+  --dark-red: #820000;
   --process-black: #2e2d29;
   --text-on-cardinal: #e3dfd5;
   --sandstone: #d2c295;
@@ -21,9 +22,13 @@ a::selection {
 
 a,
 a::selection {
-  color: var(--lagunita);
-  color: var(--cardinal);
+  color: var(--dark-red);
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--process-black);
+  text-decoration: underline;;
 }
 
 p {
@@ -39,6 +44,7 @@ code {
   border-radius: 3px;
   font-family: 'Source Sans Mono', monospace;
   font-size: .9em;
+  user-select: all;
 }
 
 h1,
