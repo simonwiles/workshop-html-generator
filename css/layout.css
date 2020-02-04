@@ -16,6 +16,10 @@ header > div,
   width: 640px;
 }
 
+main {
+  margin: 2em auto 0;
+}
+
 header > div {
   align-items: flex-end;
   display: flex;
@@ -34,7 +38,6 @@ header span {
 header {
   background-color: var(--cardinal);
   color: white;
-  margin-bottom: 40px;
   padding-bottom: 10px;
 }
 
@@ -68,8 +71,4 @@ h4:hover .headerlink,
 h5:hover .headerlink,
 h6:hover .headerlink {
   visibility: visible;
-}
-
-aside {
-  display: none;
 }

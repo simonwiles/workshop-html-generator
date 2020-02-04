@@ -1,0 +1,130 @@
+form#sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+input#open-sidebar:checked ~ #sidebar-content {
+  transform: translateX(0);
+}
+
+input#open-sidebar {
+  transition: all 0.3s;
+  display: none;
+}
+
+label[for="open-sidebar"] {
+  transition: all 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 99;
+  height: 22px;
+  width: 22px;
+}
+.spinner {
+  transition: all 0.3s;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: var(--cardinal);
+  user-select: none;
+}
+.horizontal {
+  transition: all 0.3s;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input#open-sidebar:checked ~ label[for="open-sidebar"] > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input#open-sidebar:checked ~ label[for="open-sidebar"] > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+input#open-sidebar:checked ~ label[for="open-sidebar"] > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
+#sidebar-content {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background: var(--sandstone);
+  padding-top: 48px;
+}
+
+.toc ul {
+  margin:0;
+  padding:0 0 0 0.5em;
+}
+
+.toc li {
+  list-style: none;
+  cursor: pointer;
+  padding-left: 1em;
+  text-indent: -1em;
+  font-size: .9em;
+  margin: .5em 0;
+}
+
+.toc li::before {
+  content: "§";
+  color: var(--dark-red);
+  font-size: 1.2em;
+  line-height: 1em;
+}
+
+.toc li a {
+  color: var(--process-black);
+  display: inline-block;
+  padding-left: 1em;
+  text-indent: -1em;
+  vertical-align: top;
+  max-width: 90%;
+}
+
+.toc > ul {
+  padding: 0;
+}
+
+.toc > ul > li {
+  list-style: none;
+  padding: 0 0 0 .5em;
+  text-indent: 0;
+  font-size: 1.1em;
+}
+
+.toc > ul > li::before {
+  display: none;
+}
+
+.toc > ul > li > a {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Source Serif Pro', serif;
+}
