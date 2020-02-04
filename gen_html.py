@@ -37,7 +37,9 @@ def render_html(template_fn, template_vars):
     template_path = Path(template_fn).resolve()
     mytemplate = Template(
         filename=str(template_path),
-        lookup=TemplateLookup(directories=[str(template_path.parent)]),
+        lookup=TemplateLookup(
+            directories=[str(template_path.parent)], input_encoding="utf-8"
+        ),
     )
     document, errors = tidy_document(
         mytemplate.render(**template_vars),
