@@ -13,7 +13,7 @@ from pathlib import Path
 from mako.lookup import TemplateLookup
 from mako.runtime import capture
 from mako.template import Template
-import markdown
+from markdown import Markdown
 from markdown.extensions.toc import TocExtension
 from rcssmin import cssmin
 from tidylib import tidy_document
@@ -87,7 +87,7 @@ def main():
     markdown_path = Path(args.markdown_file)
     title = markdown_path.stem.replace("_", " ")
 
-    md = markdown.Markdown(
+    md = Markdown(
         extensions=["extra", TocExtension(permalink=True, anchorlink=True)],
         output_format="html5",
     )
