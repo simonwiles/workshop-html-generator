@@ -11,10 +11,22 @@ from datetime import datetime
 from pathlib import Path
 
 from mako.lookup import TemplateLookup
+from mako.runtime import capture
 from mako.template import Template
 import markdown
 from markdown.extensions.toc import TocExtension
+from rcssmin import cssmin
 from tidylib import tidy_document
+
+
+def css(fn):
+    """ Decorator to minify blocks of CSS. """
+
+    def decorate(context, *args, **kwargs):
+        css_block = capture(context, fn, *args, **kwargs).strip()
+        context.write(cssmin(css_block))
+
+    return decorate
 
 
 def get_git_revision_for_file(file_path: Path):
@@ -40,6 +52,7 @@ def render_html(template_fn, template_vars):
         lookup=TemplateLookup(
             directories=[str(template_path.parent)], input_encoding="utf-8"
         ),
+        imports=["from typogrify.filters import typogrify", "from gen_html import css"],
     )
     document, errors = tidy_document(
         mytemplate.render(**template_vars),

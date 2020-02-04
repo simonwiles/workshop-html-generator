@@ -15,10 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro" rel="stylesheet">
     <style>
+      <%block decorator="css">
       <%include file="/css/css-reset.css" />
       <%include file="/css/elements.css" />
       <%include file="/css/sidebar.css" />
       <%include file="/css/layout.css" />
+      </%block>
     </style>
   </head>
 
@@ -45,7 +47,7 @@
       </label>
       <div id="sidebar-content">${toc}</div>
     </form>
-    <main><article>${content}</article></main>
+    <main><article><%block filter="typogrify">${content}</%block></article></main>
     <footer>
       <p class="wrapped">
         This workshop is part of the CIDR Workshop Series.<br>
