@@ -3,6 +3,8 @@
 This repo contains code and a template used to generate HTML versions of workshops from the [CIDR workshops repository](https://github.com/sul-cidr/Workshops).  A GitHub Actions workflow on that repo uses the code here to generate/update the published versions when a push is made.
 
 ## Possible Enhancements
+* add visible "last updated" value
+* encode all images as base64?
 * Use `<details/>` to allow "spoiler"-style activity "answers".
 	- Use https://github.com/javan/details-element-polyfill to support IE and old browsers (and Edge until it moves to blink).
 * Consider adding SASS/SCSS support to allow making the CSS source neater.
