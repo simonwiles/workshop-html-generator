@@ -74,7 +74,7 @@ input#open-sidebar:checked ~ label[for="open-sidebar"] > .diagonal.part-2 {
   width: 250px;
   transform: translateX(-250px);
   transition: transform 250ms ease-in-out;
-  background: var(--sandstone);
+  background: var(--sandstone-paler);
   padding-top: 48px;
 }
 
