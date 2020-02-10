@@ -88,7 +88,11 @@ def main():
     title = markdown_path.stem.replace("_", " ")
 
     md = Markdown(
-        extensions=["extra", TocExtension(permalink=True, anchorlink=True)],
+        extensions=[
+            "extra",
+            "admonition",
+            TocExtension(permalink=True, anchorlink=True),
+        ],
         output_format="html5",
     )
 
