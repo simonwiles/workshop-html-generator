@@ -68,3 +68,30 @@ h5 { font-size: 1em; }
 h6 { font-size: .9em; }
 
 article > ul > * + * { margin-top: .8em; }
+
+.instruction {
+  background-color: var(--sandstone-paler);
+  padding: .5em 1em;
+  border-radius: .5em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  border: 1px solid var(--sandstone);
+}
+
+.toclink {
+  color: inherit;
+}
+
+.headerlink {
+  margin-left: 4px;
+  visibility: hidden;
+}
+
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink,
+h4:hover .headerlink,
+h5:hover .headerlink,
+h6:hover .headerlink {
+  visibility: visible;
+}
