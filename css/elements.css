@@ -1,7 +1,6 @@
 
 :root {
   --background-color: #f6f6f6;
-  --pale-yellow: rgba(255, 255, 0, .3);
 
   /* From the Stanford Color Palette */
   --cardinal: #8c1515;
@@ -10,6 +9,7 @@
   --text-on-cardinal: #e3dfd5;
   --sandstone: #d2c295;
   --sandstone-paler: #e3dbc5;
+  --sandstone-semi-trsp: rgba(210, 194, 149, .6);
   --chocolate: #2F2424;
   --light-sage: #c7d1c5;
   --lagunita: #007c92;
@@ -17,7 +17,7 @@
 
 ::selection,
 a::selection {
-  background: var(--pale-yellow);
+  background: var(--sandstone-semi-trsp);
 }
 
 a,
