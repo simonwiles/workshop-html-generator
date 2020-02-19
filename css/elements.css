@@ -31,8 +31,19 @@ a:hover {
   text-decoration: underline;;
 }
 
+hr {
+  margin: 4em 0;
+}
+
 p {
   margin: 1em 0;
+}
+
+blockquote {
+  color: #666;
+  margin: 0;
+  padding-left: 3em;
+  border-left: .5em #EEE solid
 }
 
 code {
@@ -69,24 +80,6 @@ h6 { font-size: .9em; }
 
 article > ul > * + * { margin-top: .8em; }
 
-.instruction {
-  background-color: var(--sandstone-paler);
-  padding: .5em 1em;
-  border-radius: .5em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-  border: 1px solid var(--sandstone);
-}
-
-.toclink {
-  color: inherit;
-}
-
-.headerlink {
-  margin-left: 4px;
-  visibility: hidden;
-}
-
 h1:hover .headerlink,
 h2:hover .headerlink,
 h3:hover .headerlink,
@@ -94,4 +87,12 @@ h4:hover .headerlink,
 h5:hover .headerlink,
 h6:hover .headerlink {
   visibility: visible;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  margin-top: 1em;
 }
