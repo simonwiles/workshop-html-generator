@@ -57,6 +57,15 @@
         See upcoming workshops at https://cidr.stanford.edu/workshops/
       </p>
     </footer>
+
+    <script>
+      window.addEventListener("keydown", ({key}) => {
+        if (key == "Escape") {
+          document.getElementById("open-sidebar").checked = false;
+        }
+      })
+    </script>
+
   </body>
 
 </html>
