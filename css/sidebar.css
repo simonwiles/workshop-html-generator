@@ -30,7 +30,7 @@ label[for="open-sidebar"] {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: var(--cardinal);
+  background-color: var(--sidebar-toggle-color);
   user-select: none;
 }
 .horizontal {
@@ -76,7 +76,7 @@ input#open-sidebar:checked ~ label[for="open-sidebar"] > .diagonal.part-2 {
   width: var(--sidebar-width);
   transform: translateX(calc(-1 * var(--sidebar-width)));
   transition: transform 250ms ease-in-out;
-  background: var(--sandstone-paler);
+  background: var(--sidebar-background);
   padding-top: 48px;
 }
 
@@ -101,13 +101,13 @@ input#open-sidebar:checked ~ label[for="open-sidebar"] > .diagonal.part-2 {
 
 .toc li::before {
   content: "§";
-  color: var(--dark-red);
+  color: var(--sidebar-section-bullet-color);
   font-size: 1.2em;
   line-height: 1em;
 }
 
 .toc li a {
-  color: var(--process-black);
+  color: var(--text-color);
   display: inline-block;
   padding-left: 1em;
   text-indent: -1em;

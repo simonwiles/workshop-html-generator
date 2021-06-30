@@ -8,12 +8,12 @@
 }
 
 .instruction {
-  background-color: var(--sandstone-paler);
+  background-color: var(--instruction-background);
   padding: .5em 1em;
   border-radius: .5em;
   margin-left: 1.5em;
   margin-right: 1.5em;
-  border: 1px solid var(--sandstone);
+  border: 1px solid var(--instruction-border);
   clear: both;
 }
 

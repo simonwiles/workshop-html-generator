@@ -1,16 +1,16 @@
 ::selection,
 a::selection {
-  background: var(--sandstone-semi-trsp);
+  background: var(--selection-background);
 }
 
 a,
 a::selection {
-  color: var(--dark-red);
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--process-black);
+  color: var(--text-color);
   text-decoration: underline;;
 }
 
