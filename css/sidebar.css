@@ -1,5 +1,5 @@
 form#sidebar {
-  --sidebar-width: 500px;
+  --sidebar-width: 400px;
   position: sticky;
   top: 0;
   left: 0;

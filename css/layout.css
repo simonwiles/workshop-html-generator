@@ -2,6 +2,7 @@
 /* specific styles and over-rides */
 
 body {
+  --content-width: 1000px;
   background-color: var(--background-color);
   color: var(--process-black);
   font-family: 'Source Sans Pro', sans-serif;
@@ -15,7 +16,7 @@ header > div,
   margin: 0 auto;
   max-width: 90vw;
   padding: 10px 0;
-  width: 640px;
+  width: var(--content-width);
 }
 
 main {
@@ -29,7 +30,7 @@ header > div {
   margin: 0 auto;
   max-width: 90vw;
   padding: 10px 0;
-  width: 640px;
+  width: var(--content-width);
 }
 
 header span {
