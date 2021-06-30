@@ -7,10 +7,11 @@
   --sandstone: #d2c295;
   --sandstone-paler: #e3dbc5;
   --sandstone-semi-trsp: rgba(210, 194, 149, .6);
-  --chocolate: #2F2424;
-  --light-sage: #c7d1c5;
-  --lagunita: #007c92;
 
+  --90-grey: #43423E;
+
+  --digital-blue: #006CB8;
+  --digital-blue-light: #6FC3FF;
 
 }
 
@@ -22,6 +23,8 @@ body {
 
   --selection-background: var(--sandstone-semi-trsp);
 
+  --code-color: var(--text-color);
+
   --sidebar-background: var(--sandstone-paler);
   --sidebar-toggle-color: var(--cardinal);
   --sidebar-section-bullet-color: var(--dark-red);
@@ -29,3 +32,23 @@ body {
   --instruction-border: var(--sandstone);
   --instruction-background: var(--sandstone-paler);
 }
+
+body.dark-mode {
+  --background-color: var(--process-black);
+
+  --text-color: var(--text-on-cardinal);
+  --link-color: var(--digital-blue-light);
+
+  --selection-background: var(--sandstone-semi-trsp);
+
+  --code-color: var(--process-black);
+
+  --sidebar-background: var(--90-grey);
+  --sidebar-toggle-color:  var(--digital-blue);
+  --sidebar-section-bullet-color: var(--digital-blue-light);
+
+  --instruction-border: var(--sandstone);
+  --instruction-background: var(--90-grey);
+}
+
+body.dark-mode img.dm-invert { filter: invert(1); }

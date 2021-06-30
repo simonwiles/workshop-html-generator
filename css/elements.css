@@ -30,6 +30,7 @@ blockquote {
 }
 
 code {
+  color: var(--code-color);
   margin: 0 2px;
   padding: 4px 5px 0;
   white-space: nowrap;
