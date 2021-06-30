@@ -9,7 +9,7 @@ This repo contains code and a template used to generate HTML versions of worksho
 !!! instruction "<optional title>"
     Your text here
 ```
-
+* Now with **Dark Mode** 🤪
 
 ## Possible Enhancements
 * add visible "last updated" value
