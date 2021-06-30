@@ -1,4 +1,5 @@
 form#sidebar {
+  --sidebar-width: 500px;
   position: sticky;
   top: 0;
   left: 0;
@@ -71,8 +72,8 @@ input#open-sidebar:checked ~ label[for="open-sidebar"] > .diagonal.part-2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 250px;
-  transform: translateX(-250px);
+  width: var(--sidebar-width);
+  transform: translateX(calc(-1 * var(--sidebar-width)));
   transition: transform 250ms ease-in-out;
   background: var(--sandstone-paler);
   padding-top: 48px;
