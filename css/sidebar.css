@@ -132,6 +132,6 @@ input#open-sidebar:checked ~ label[for="open-sidebar"] > .diagonal.part-2 {
 
 .toc > ul > li > a {
   margin: 0;
-  font-weight: bold;
+  font-weight: 400;
   font-family: 'Source Serif Pro', serif;
 }
