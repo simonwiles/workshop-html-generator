@@ -15,7 +15,7 @@
 
 }
 
-body {
+form, main {
   --background-color: #f6f6f6;
 
   --text-color: var(--process-black);
@@ -33,7 +33,8 @@ body {
   --instruction-background: var(--sandstone-paler);
 }
 
-body.dark-mode {
+input#dark-mode:checked ~ main,
+input#dark-mode:checked ~ form {
   --background-color: var(--process-black);
 
   --text-color: var(--text-on-cardinal);
@@ -51,4 +52,10 @@ body.dark-mode {
   --instruction-background: var(--90-grey);
 }
 
-body.dark-mode img.dm-invert { filter: invert(1); }
+img.dm-invert {
+  transition: filter 0.3s ease-in-out;
+}
+
+input#dark-mode:checked ~ main img.dm-invert {
+  filter: invert(1);
+}

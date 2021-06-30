@@ -3,14 +3,18 @@
 
 body {
   --content-width: 1000px;
-  background-color: var(--background-color);
-  color: var(--text-color);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   font-weight: 300;
 }
 
-main,
+main {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+main > article,
 header > div,
 .wrapped {
   margin: 0 auto;
@@ -19,8 +23,8 @@ header > div,
   width: var(--content-width);
 }
 
-main {
-  margin: 2em auto 4em;
+main > article {
+  padding: 2em 0 4em;
 }
 
 header > div {

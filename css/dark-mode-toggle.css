@@ -1,0 +1,50 @@
+input#dark-mode {
+  display: none;
+}
+
+#dark-mode-toggle {
+  position: sticky;
+  float: right;
+  padding: 20px;
+  top: 0;
+}
+
+#dark-mode-toggle .toggle-border {
+  border: 1px solid var(--process-black);
+  width: 50px;
+  height: 22px;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+}
+#dark-mode-toggle .toggle-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--process-black);
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+#dark-mode-toggle .toggle-indicator::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  right: 5px;
+  background-color: var(--process-black);
+}
+
+input#dark-mode:checked ~ #dark-mode-toggle .toggle-border {
+  border-color: white;
+}
+input#dark-mode:checked ~ #dark-mode-toggle .toggle-indicator {
+  background-color: var(--text-on-cardinal);
+  left: calc(50px - 22px);
+  transform: rotate(180deg);
+}

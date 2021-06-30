@@ -15,6 +15,7 @@
   margin-right: 1.5em;
   border: 1px solid var(--instruction-border);
   clear: both;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .pull-right {

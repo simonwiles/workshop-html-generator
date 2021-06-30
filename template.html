@@ -22,6 +22,7 @@
       <%include file="/css/theme.css" />
       <%include file="/css/elements.css" />
       <%include file="/css/classes.css" />
+      <%include file="/css/dark-mode-toggle.css" />
       <%include file="/css/sidebar.css" />
       <%include file="/css/layout.css" />
       </%block>
@@ -42,6 +43,12 @@
       </div>
     </header>
 
+    <input type="checkbox" id="dark-mode">
+    <label id="dark-mode-toggle" for="dark-mode">
+      <span class="toggle-border">
+        <span class="toggle-indicator">&nbsp;</span>
+      </span>
+    </label>
     <form id="sidebar">
       <input type="checkbox" id="open-sidebar">
       <label for="open-sidebar">
