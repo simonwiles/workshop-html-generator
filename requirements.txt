@@ -1,4 +1,4 @@
-Mako==1.0.7
+Mako==1.2.2
 Markdown==3.0.1
 pytidylib==0.3.2
 rcssmin==1.0.6
